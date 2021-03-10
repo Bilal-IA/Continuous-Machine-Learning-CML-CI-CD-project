@@ -15,7 +15,7 @@ import os
 
 
 # Read and split data
-df = pd.read_csv("Real estate.csv")
+df = pd.read_csv("Real_estate.csv")
 X = df.iloc[:,1:-1]
 y = df.iloc[:,-1]
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.05,random_state = 0)
