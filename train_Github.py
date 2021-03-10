@@ -15,7 +15,10 @@ import os
 
 
 # Read and split data
-df = pd.read_csv("Real_estate.csv")
+url = 'https://drive.google.com/file/d/1VRGnIVDBmISVl9skNVzld9dO28mWPNVL/view?usp=sharing'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df = pd.read_csv(path)
+
 X = df.iloc[:,1:-1]
 y = df.iloc[:,-1]
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.05,random_state = 0)
