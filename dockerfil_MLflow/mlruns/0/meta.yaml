@@ -1,4 +1,4 @@
-artifact_location: file:///home/bilal/Documents/AI-AEC/A57%20Mise%20en%20place%20%C3%A9cosyst%C3%A8me%20d%27IA/projets/TP_01/Demo_MLflow_Dockerfil/mlruns/0
+artifact_location: file:///home/bilal/Documents/AI-AEC/A57%20Mise%20en%20place%20%C3%A9cosyst%C3%A8me%20d%27IA/projets/TP_01/Continuous-Machine-Learning-CML-CI-CD-project/mlruns/0
 experiment_id: '0'
 lifecycle_stage: active
 name: Default
