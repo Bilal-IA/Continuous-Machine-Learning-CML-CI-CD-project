@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -12,6 +6,13 @@ import pandas as pd
 import numpy as np
 import pickle
 import os
+
+import mlflow
+import mlflow.sklearn
+ 
+import logging
+logging.basicConfig(level=logging.WARN)
+logger = logging.getLogger(__name__)
 
 
 # Read and split data
@@ -48,15 +49,16 @@ with open("metrics.txt", 'w') as outfile:
         outfile.write("MAE: " + str(mae) + "\n")
         outfile.write("R2 score: " + str(r2) + "\n")
 
-
+with mlflow.start_run():
+    mlflow.set_experiment(experiment_name="mlflow_CI_CD")
+    mlflow.log_metric("rmse", rmse)
+    mlflow.log_metric("r2", r2)
+    mlflow.log_metric("mae", mae)
+    mlflow.sklearn.log_model(reg, "model")
+    
 # Draw, show, and save regplot
 ax = sns.regplot(x=y_test,y=y_pred,fit_reg=True)
 ax.figure.savefig('regplot.png')
 
 # Create (Pickle file) and save regression model to disk
 pickle.dump(reg, open('dockerfille_dev/model.pkl','wb'))
-
-# Copy the update files (Ml model and Flask web Api) and Restart Service with container (in the background )
-#os.system("docker cp dockerfille_dev/flask_api.py real_estat_price_container:/usr/app/flask_api.py\
-#&& docker cp dockerfille_dev/model.pkl real_estat_price_container:/usr/app/model.pkl\
-#&& docker restart real_estat_price_container")
