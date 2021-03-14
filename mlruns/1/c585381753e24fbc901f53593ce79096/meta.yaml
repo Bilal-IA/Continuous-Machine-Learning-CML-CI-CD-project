@@ -1,0 +1,15 @@
+artifact_uri: file:///home/bilal/Documents/AI-AEC/A57%20Mise%20en%20place%20%C3%A9cosyst%C3%A8me%20d%27IA/projets/TP_01/Demo_MLflow_Dockerfil/mlruns/1/c585381753e24fbc901f53593ce79096/artifacts
+end_time: 1615655447682
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: c585381753e24fbc901f53593ce79096
+run_uuid: c585381753e24fbc901f53593ce79096
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1615655447661
+status: 3
+tags: []
+user_id: bilal

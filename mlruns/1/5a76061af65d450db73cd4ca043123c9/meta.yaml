@@ -1,0 +1,15 @@
+artifact_uri: file:///home/bilal/Documents/AI-AEC/A57%20Mise%20en%20place%20%C3%A9cosyst%C3%A8me%20d%27IA/projets/TP_01/Continuous-Machine-Learning-CML-CI-CD-project/mlruns/1/5a76061af65d450db73cd4ca043123c9/artifacts
+end_time: 1615745290658
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 5a76061af65d450db73cd4ca043123c9
+run_uuid: 5a76061af65d450db73cd4ca043123c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1615745290649
+status: 3
+tags: []
+user_id: bilal
